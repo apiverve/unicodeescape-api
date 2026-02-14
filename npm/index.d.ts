@@ -7,7 +7,7 @@ declare module '@apiverve/unicodeescape' {
   export interface unicodeescapeResponse {
     status: string;
     error: string | null;
-    data: UnicodeEscape/UnescapeData;
+    data: UnicodeEscapeUnescapeData;
     code?: number;
   }
 
@@ -15,9 +15,15 @@ declare module '@apiverve/unicodeescape' {
   interface UnicodeEscapeUnescapeData {
       action:         string;
       original:       string;
-      result:         string;
+      escaped:        string;
       characterCount: number;
-      escapedCount:   number;
+      unicodePoints:  UnicodePoint[];
+  }
+  
+  interface UnicodePoint {
+      char:      string;
+      unicode:   string;
+      codepoint: string;
   }
 
   export default class unicodeescapeWrapper {
