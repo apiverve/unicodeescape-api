@@ -1,1 +1,3 @@
-from .apiClient import UnicodeescapeAPIClient
+from .apiClient import UnicodeescapeAPIClient, UnicodeescapeAPIClientError
+
+__all__ = ['UnicodeescapeAPIClient', 'UnicodeescapeAPIClientError']
