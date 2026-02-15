@@ -6,7 +6,7 @@
 //
 //    var responseObj = ResponseObj.FromJson(jsonString);
 
-namespace APIVerve.API.UnicodeEscape/Unescape
+namespace APIVerve.API.UnicodeEscapeUnescape
 {
     using System;
     using System.Collections.Generic;
@@ -35,13 +35,25 @@ namespace APIVerve.API.UnicodeEscape/Unescape
         [JsonProperty("original")]
         public string Original { get; set; }
 
-        [JsonProperty("result")]
-        public string Result { get; set; }
+        [JsonProperty("escaped")]
+        public string Escaped { get; set; }
 
         [JsonProperty("character_count")]
         public long CharacterCount { get; set; }
 
-        [JsonProperty("escaped_count")]
-        public long EscapedCount { get; set; }
+        [JsonProperty("unicode_points")]
+        public UnicodePoint[] UnicodePoints { get; set; }
+    }
+
+    public partial class UnicodePoint
+    {
+        [JsonProperty("char")]
+        public string Char { get; set; }
+
+        [JsonProperty("unicode")]
+        public string Unicode { get; set; }
+
+        [JsonProperty("codepoint")]
+        public string Codepoint { get; set; }
     }
 }
