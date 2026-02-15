@@ -111,9 +111,9 @@ import com.fasterxml.jackson.annotation.*;
 public class UnicodeEscapeUnescapeData {
     private String action;
     private String original;
-    private String result;
+    private String escaped;
     private long characterCount;
-    private long escapedCount;
+    private UnicodePoint[] unicodePoints;
 
     @JsonProperty("action")
     public String getAction() { return action; }
@@ -125,18 +125,45 @@ public class UnicodeEscapeUnescapeData {
     @JsonProperty("original")
     public void setOriginal(String value) { this.original = value; }
 
-    @JsonProperty("result")
-    public String getResult() { return result; }
-    @JsonProperty("result")
-    public void setResult(String value) { this.result = value; }
+    @JsonProperty("escaped")
+    public String getEscaped() { return escaped; }
+    @JsonProperty("escaped")
+    public void setEscaped(String value) { this.escaped = value; }
 
     @JsonProperty("character_count")
     public long getCharacterCount() { return characterCount; }
     @JsonProperty("character_count")
     public void setCharacterCount(long value) { this.characterCount = value; }
 
-    @JsonProperty("escaped_count")
-    public long getEscapedCount() { return escapedCount; }
-    @JsonProperty("escaped_count")
-    public void setEscapedCount(long value) { this.escapedCount = value; }
+    @JsonProperty("unicode_points")
+    public UnicodePoint[] getUnicodePoints() { return unicodePoints; }
+    @JsonProperty("unicode_points")
+    public void setUnicodePoints(UnicodePoint[] value) { this.unicodePoints = value; }
+}
+
+// UnicodePoint.java
+
+package com.apiverve.unicodeescape.data;
+
+import com.fasterxml.jackson.annotation.*;
+
+public class UnicodePoint {
+    private String unicodePointChar;
+    private String unicode;
+    private String codepoint;
+
+    @JsonProperty("char")
+    public String getUnicodePointChar() { return unicodePointChar; }
+    @JsonProperty("char")
+    public void setUnicodePointChar(String value) { this.unicodePointChar = value; }
+
+    @JsonProperty("unicode")
+    public String getUnicode() { return unicode; }
+    @JsonProperty("unicode")
+    public void setUnicode(String value) { this.unicode = value; }
+
+    @JsonProperty("codepoint")
+    public String getCodepoint() { return codepoint; }
+    @JsonProperty("codepoint")
+    public void setCodepoint(String value) { this.codepoint = value; }
 }
