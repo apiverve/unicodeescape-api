@@ -26,7 +26,7 @@ Add the dependency:
 
 ```gradle
 dependencies {
-    implementation 'com.github.apiverve:unicodeescape-api:1.1.12'
+    implementation 'com.github.apiverve:unicodeescape-api:1.1.13'
 }
 ```
 
@@ -37,17 +37,18 @@ dependencies {
 ### Basic Usage
 
 ```java
-import com.apiverve.unicodeescape.UnicodeEscape/UnescapeAPIClient;
+import com.apiverve.unicodeescape.UnicodeEscapeUnescapeAPIClient;
 import com.apiverve.unicodeescape.APIResponse;
 import com.apiverve.unicodeescape.APIException;
 
 // Initialize the client
-UnicodeEscape/UnescapeAPIClient client = new UnicodeEscape/UnescapeAPIClient("YOUR_API_KEY");
+UnicodeEscapeUnescapeAPIClient client = new UnicodeEscapeUnescapeAPIClient("YOUR_API_KEY");
 
 try {
     // Prepare request parameters
     Map<String, Object> parameters = new HashMap<>();
-    parameters.put("key", "value");
+    parameters.put("text", "Hello 👋");
+    parameters.put("action", "escape");
 
     // Execute the request
     APIResponse response = client.execute(parameters);
@@ -135,7 +136,7 @@ For detailed API documentation, visit: [https://docs.apiverve.com/ref/unicodeesc
 
 ## Get Your API Key
 
-Get your API key from [https://apiverve.com](https://apiverve.com)
+Get your API key from [https://apiverve.com](https://apiverve.com?utm_source=android&utm_medium=readme)
 
 ---
 
@@ -162,4 +163,4 @@ This SDK is released under the MIT License. See [LICENSE](LICENSE) for details.
 
 ## About APIVerve
 
-[APIVerve](https://apiverve.com) provides production-ready REST APIs for developers. Fast, reliable, and easy to integrate.
+[APIVerve](https://apiverve.com?utm_source=android&utm_medium=readme) provides production-ready REST APIs for developers. Fast, reliable, and easy to integrate.
