@@ -26,7 +26,7 @@ Add the dependency:
 
 ```gradle
 dependencies {
-    implementation 'com.github.apiverve:unicodeescape-api:1.1.13'
+    implementation 'com.github.apiverve:unicodeescape-api:1.1.14'
 }
 ```
 
@@ -47,7 +47,7 @@ UnicodeEscapeUnescapeAPIClient client = new UnicodeEscapeUnescapeAPIClient("YOUR
 try {
     // Prepare request parameters
     Map<String, Object> parameters = new HashMap<>();
-    parameters.put("text", "Hello 👋");
+    parameters.put("text", "Hello World");
     parameters.put("action", "escape");
 
     // Execute the request
