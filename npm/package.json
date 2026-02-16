@@ -1,6 +1,6 @@
 {
   "name": "@apiverve/unicodeescape",
-  "version": "1.1.13",
+  "version": "1.1.14",
   "description": "Unicode Escape/Unescape is a tool for converting characters to Unicode escape sequences and vice versa. It handles all Unicode characters including emojis and surrogate pairs.",
   "main": "index.js",
   "types": "index.d.ts",
