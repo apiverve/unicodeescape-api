@@ -44,7 +44,10 @@ from apiverve_unicodeescape/unescape.apiClient import UnicodeescapeAPIClient
 # Initialize the client with your APIVerve API key
 api = UnicodeescapeAPIClient("[YOUR_API_KEY]")
 
-query = { "text": "Hello World", "action": "escape" }
+query = {
+    "text": "Hello World",
+    "action": "escape"
+}
 
 try:
     # Make the API call
@@ -82,7 +85,10 @@ Using the API client, you can perform requests to the API.
 ###### Define Query
 
 ```python
-query = { "text": "Hello World", "action": "escape" }
+query = {
+    "text": "Hello World",
+    "action": "escape"
+}
 ```
 
 ###### Simple Request
@@ -180,7 +186,10 @@ from apiverve_unicodeescape/unescape.apiClient import UnicodeescapeAPIClient, Un
 
 api = UnicodeescapeAPIClient("[YOUR_API_KEY]")
 
-query = { "text": "Hello World", "action": "escape" }
+query = {
+    "text": "Hello World",
+    "action": "escape"
+}
 
 try:
     result = api.execute(query)
@@ -201,7 +210,10 @@ from apiverve_unicodeescape/unescape.apiClient import UnicodeescapeAPIClient, Un
 
 api = UnicodeescapeAPIClient("[YOUR_API_KEY]")
 
-query = { "text": "Hello World", "action": "escape" }
+query = {
+    "text": "Hello World",
+    "action": "escape"
+}
 
 try:
     result = api.execute(query)
@@ -235,7 +247,10 @@ The client supports the context manager protocol for automatic resource cleanup:
 ```python
 from apiverve_unicodeescape/unescape.apiClient import UnicodeescapeAPIClient, UnicodeescapeAPIClientError
 
-query = { "text": "Hello World", "action": "escape" }
+query = {
+    "text": "Hello World",
+    "action": "escape"
+}
 
 # Using context manager ensures proper cleanup
 with UnicodeescapeAPIClient("[YOUR_API_KEY]") as api:
@@ -261,7 +276,10 @@ from apiverve_unicodeescape/unescape.apiClient import UnicodeescapeAPIClient
 # Enable debug mode
 api = UnicodeescapeAPIClient("[YOUR_API_KEY]", debug=True)
 
-query = { "text": "Hello World", "action": "escape" }
+query = {
+    "text": "Hello World",
+    "action": "escape"
+}
 
 # Debug information will be printed to console
 result = api.execute(query)
@@ -276,8 +294,12 @@ from apiverve_unicodeescape/unescape.apiClient import UnicodeescapeAPIClient
 
 api = UnicodeescapeAPIClient("[YOUR_API_KEY]")
 
+query = {
+    "text": "Hello World",
+    "action": "escape"
+}
+
 try:
-    query = { "text": "Hello World", "action": "escape" }
     result = api.execute(query)
     print(result)
 finally:
