@@ -4,26 +4,38 @@ declare module '@apiverve/unicodeescape' {
     secure?: boolean;
   }
 
+  /**
+   * Describes fields the current plan does not unlock. Locked fields arrive as null
+   * in `data`; `locked_fields` names them, using dot paths for nested fields.
+   * Absent when the plan unlocks everything.
+   */
+  export interface PremiumInfo {
+    message: string;
+    upgrade_url: string;
+    locked_fields: string[];
+  }
+
   export interface unicodeescapeResponse {
     status: string;
     error: string | null;
     data: UnicodeEscapeUnescapeData;
     code?: number;
+    premium?: PremiumInfo;
   }
 
 
   interface UnicodeEscapeUnescapeData {
-      action:         string;
-      original:       string;
-      escaped:        string;
-      characterCount: number;
+      action:         null | string;
+      original:       null | string;
+      escaped:        null | string;
+      characterCount: number | null;
       unicodePoints:  UnicodePoint[];
   }
   
   interface UnicodePoint {
-      char:      string;
-      unicode:   string;
-      codepoint: string;
+      char:      null | string;
+      unicode:   null | string;
+      codepoint: null | string;
   }
 
   export default class unicodeescapeWrapper {
