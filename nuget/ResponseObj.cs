@@ -25,6 +25,9 @@ namespace APIVerve.API.UnicodeEscapeUnescape
 
         [JsonProperty("data")]
         public Data Data { get; set; }
+
+        [JsonProperty("premium")]
+        public Premium Premium { get; set; }
     }
 
     public partial class Data
@@ -39,7 +42,7 @@ namespace APIVerve.API.UnicodeEscapeUnescape
         public string Escaped { get; set; }
 
         [JsonProperty("character_count")]
-        public long CharacterCount { get; set; }
+        public long? CharacterCount { get; set; }
 
         [JsonProperty("unicode_points")]
         public UnicodePoint[] UnicodePoints { get; set; }
@@ -55,5 +58,17 @@ namespace APIVerve.API.UnicodeEscapeUnescape
 
         [JsonProperty("codepoint")]
         public string Codepoint { get; set; }
+    }
+
+    public partial class Premium
+    {
+        [JsonProperty("message")]
+        public string Message { get; set; }
+
+        [JsonProperty("upgrade_url")]
+        public Uri UpgradeUrl { get; set; }
+
+        [JsonProperty("locked_fields")]
+        public string[] LockedFields { get; set; }
     }
 }
