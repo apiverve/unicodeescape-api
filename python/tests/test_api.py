@@ -1,5 +1,5 @@
 import unittest
-from apiverve_unicodeescape/unescape.apiClient import UnicodeescapeAPIClient
+from apiverve_unicodeescapeunescape.apiClient import UnicodeescapeAPIClient
 from unittest.mock import patch
 
 class TestUnicodeescapeAPIClient(unittest.TestCase):
@@ -8,7 +8,7 @@ class TestUnicodeescapeAPIClient(unittest.TestCase):
         self.api_key = 'test_api_key'
         self.client = UnicodeescapeAPIClient(self.api_key)
 
-    @patch('apiverve_unicodeescape/unescape.apiClient.requests.get')
+    @patch('apiverve_unicodeescapeunescape.apiClient.requests.get')
     def test_make_request_success(self, mock_get):
         # Assuming there's an endpoint 'test_endpoint' for testing purposes
         mock_get.return_value.status_code = 200
@@ -16,7 +16,7 @@ class TestUnicodeescapeAPIClient(unittest.TestCase):
         response = self.client.get('test_endpoint')
         self.assertIsInstance(response, dict)
 
-    @patch('apiverve_unicodeescape/unescape.apiClient.requests.get')
+    @patch('apiverve_unicodeescapeunescape.apiClient.requests.get')
     def test_make_request_failure(self, mock_get):
         # Assuming there's an endpoint 'test_endpoint' for testing purposes
         mock_get.return_value.status_code = 404

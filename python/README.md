@@ -1,13 +1,12 @@
 Unicode Escape/Unescape API
 ============
 
-Unicode Escape/Unescape is a tool for converting characters to Unicode escape sequences and vice versa. It handles all Unicode characters including emojis and surrogate pairs.
+Unicode Escape/Unescape converts text into Unicode escape sequences or restores escaped strings back into readable characters. Send any string to get the transformed text and total character count.
 
-![Build Status](https://img.shields.io/badge/build-passing-green)
-![Code Climate](https://img.shields.io/badge/maintainability-B-purple)
-![Prod Ready](https://img.shields.io/badge/production-ready-blue)
 
-This is a Python API Wrapper for the [Unicode Escape/Unescape API](https://apiverve.com/marketplace/unicodeescape?utm_source=pypi&utm_medium=readme)
+[![PyPI version](https://img.shields.io/pypi/v/apiverve-unicodeescapeunescape.svg)](https://pypi.org/project/apiverve-unicodeescapeunescape/)
+
+This is a Python wrapper for the [Unicode Escape/Unescape API](https://apiverve.com/marketplace/unicodeescape?utm_source=pypi&utm_medium=referral&utm_content=readme)
 
 ---
 
@@ -16,21 +15,21 @@ This is a Python API Wrapper for the [Unicode Escape/Unescape API](https://apive
 Using `pip`:
 
 ```bash
-pip install apiverve-unicodeescape/unescape
+pip install apiverve-unicodeescapeunescape
 ```
 
 Using `pip3`:
 
 ```bash
-pip3 install apiverve-unicodeescape/unescape
+pip3 install apiverve-unicodeescapeunescape
 ```
 
 ---
 
 ## Configuration
 
-Before using the unicodeescape API client, you have to setup your account and obtain your API Key.
-You can get it by signing up at [https://apiverve.com](https://apiverve.com?utm_source=pypi&utm_medium=readme)
+Before using the Unicode Escape/Unescape API client, you have to setup your account and obtain your API Key.
+You can get it by signing up at [https://apiverve.com](https://apiverve.com?utm_source=pypi&utm_medium=referral&utm_content=readme)
 
 ---
 
@@ -39,7 +38,7 @@ You can get it by signing up at [https://apiverve.com](https://apiverve.com?utm_
 Here's a simple example to get you started quickly:
 
 ```python
-from apiverve_unicodeescape/unescape.apiClient import UnicodeescapeAPIClient
+from apiverve_unicodeescapeunescape.apiClient import UnicodeescapeAPIClient
 
 # Initialize the client with your APIVerve API key
 api = UnicodeescapeAPIClient("[YOUR_API_KEY]")
@@ -63,14 +62,14 @@ except Exception as e:
 
 ## Usage
 
-The Unicode Escape/Unescape API documentation is found here: [https://docs.apiverve.com/ref/unicodeescape](https://docs.apiverve.com/ref/unicodeescape?utm_source=pypi&utm_medium=readme).
+The Unicode Escape/Unescape API documentation is found here: [https://docs.apiverve.com/ref/unicodeescape](https://docs.apiverve.com/ref/unicodeescape?utm_source=pypi&utm_medium=referral&utm_content=readme).
 You can find parameters, example responses, and status codes documented here.
 
 ### Setup
 
 ```python
 # Import the client module
-from apiverve_unicodeescape/unescape.apiClient import UnicodeescapeAPIClient
+from apiverve_unicodeescapeunescape.apiClient import UnicodeescapeAPIClient
 
 # Initialize the client with your APIVerve API key
 api = UnicodeescapeAPIClient("[YOUR_API_KEY]")
@@ -182,7 +181,7 @@ The API client provides comprehensive error handling through the `UnicodeescapeA
 ### Basic Error Handling
 
 ```python
-from apiverve_unicodeescape/unescape.apiClient import UnicodeescapeAPIClient, UnicodeescapeAPIClientError
+from apiverve_unicodeescapeunescape.apiClient import UnicodeescapeAPIClient, UnicodeescapeAPIClientError
 
 api = UnicodeescapeAPIClient("[YOUR_API_KEY]")
 
@@ -206,7 +205,7 @@ except UnicodeescapeAPIClientError as e:
 ### Handling Specific Error Types
 
 ```python
-from apiverve_unicodeescape/unescape.apiClient import UnicodeescapeAPIClient, UnicodeescapeAPIClientError
+from apiverve_unicodeescapeunescape.apiClient import UnicodeescapeAPIClient, UnicodeescapeAPIClientError
 
 api = UnicodeescapeAPIClient("[YOUR_API_KEY]")
 
@@ -245,7 +244,7 @@ except Exception as e:
 The client supports the context manager protocol for automatic resource cleanup:
 
 ```python
-from apiverve_unicodeescape/unescape.apiClient import UnicodeescapeAPIClient, UnicodeescapeAPIClientError
+from apiverve_unicodeescapeunescape.apiClient import UnicodeescapeAPIClient, UnicodeescapeAPIClientError
 
 query = {
     "text": "Hello World",
@@ -271,7 +270,7 @@ with UnicodeescapeAPIClient("[YOUR_API_KEY]") as api:
 Enable debug logging to see detailed request and response information:
 
 ```python
-from apiverve_unicodeescape/unescape.apiClient import UnicodeescapeAPIClient
+from apiverve_unicodeescapeunescape.apiClient import UnicodeescapeAPIClient
 
 # Enable debug mode
 api = UnicodeescapeAPIClient("[YOUR_API_KEY]", debug=True)
@@ -290,7 +289,7 @@ result = api.execute(query)
 If you need to manually manage the session lifecycle:
 
 ```python
-from apiverve_unicodeescape/unescape.apiClient import UnicodeescapeAPIClient
+from apiverve_unicodeescapeunescape.apiClient import UnicodeescapeAPIClient
 
 api = UnicodeescapeAPIClient("[YOUR_API_KEY]")
 
@@ -311,7 +310,7 @@ finally:
 
 ## Customer Support
 
-Need any assistance? [Get in touch with Customer Support](https://apiverve.com/contact?utm_source=pypi&utm_medium=readme).
+Need any assistance? [Get in touch with Customer Support](https://apiverve.com/contact?utm_source=pypi&utm_medium=referral&utm_content=readme).
 
 ---
 
@@ -322,12 +321,12 @@ Stay up to date by following [@apiverveHQ](https://twitter.com/apiverveHQ) on Tw
 
 ## Legal
 
-All usage of the APIVerve website, API, and services is subject to the [APIVerve Terms of Service](https://apiverve.com/terms?utm_source=pypi&utm_medium=readme) and all legal documents and agreements.
+All usage of the APIVerve website, API, and services is subject to the [APIVerve Terms of Service](https://apiverve.com/terms?utm_source=pypi&utm_medium=referral&utm_content=readme) and all legal documents and agreements.
 
 ---
 
 ## License
-Licensed under the The MIT License (MIT)
+Licensed under the MIT License (MIT)
 
 Copyright (&copy;) 2026 APIVerve, and EvlarSoft LLC
 
