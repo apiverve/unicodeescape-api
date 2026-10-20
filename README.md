@@ -1,13 +1,13 @@
-# [Unicode Escape/Unescape API](https://apiverve.com/marketplace/unicodeescape?utm_source&#x3D;github&amp;utm_medium&#x3D;readme)
+# [Unicode Escape/Unescape API](https://apiverve.com/marketplace/unicodeescape?utm_source&#x3D;github&amp;utm_medium&#x3D;referral&amp;utm_content&#x3D;readme)
 
-Unicode Escape/Unescape is a tool for converting characters to Unicode escape sequences and vice versa. It handles all Unicode characters including emojis and surrogate pairs.
+Unicode Escape/Unescape converts text into Unicode escape sequences or restores escaped strings back into readable characters. Send any string to get the transformed text and total character count.
 
 The Unicode Escape/Unescape API provides a simple, reliable way to integrate unicode escape/unescape functionality into your applications. Built for developers who need production-ready unicode escape/unescape capabilities without the complexity of building from scratch.
 
-**[View API Details →](https://apiverve.com/marketplace/unicodeescape?utm_source&#x3D;github&amp;utm_medium&#x3D;readme)**
+**[View API Details →](https://apiverve.com/marketplace/unicodeescape?utm_source&#x3D;github&amp;utm_medium&#x3D;referral&amp;utm_content&#x3D;readme)**
 
 [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
-[![API Status](https://img.shields.io/badge/Status-Active-green.svg)](https://apiverve.com/marketplace/unicodeescape?utm_source&#x3D;github&amp;utm_medium&#x3D;readme)
+[![API Status](https://img.shields.io/badge/Status-Active-green.svg)](https://apiverve.com/marketplace/unicodeescape?utm_source&#x3D;github&amp;utm_medium&#x3D;referral&amp;utm_content&#x3D;readme)
 [![Method](https://img.shields.io/badge/Method-POST-blue.svg)](#)
 [![Platform](https://img.shields.io/badge/Platform-Multi--Platform-orange.svg)](#installation)
 
@@ -169,7 +169,7 @@ go get github.com/apiverve/unicodeescape-api/go
 
 ## Documentation
 
-- 🏠 **API Home:** [Unicode Escape/Unescape API](https://apiverve.com/marketplace/unicodeescape?utm_source&#x3D;github&amp;utm_medium&#x3D;readme)
+- 🏠 **API Home:** [Unicode Escape/Unescape API](https://apiverve.com/marketplace/unicodeescape?utm_source&#x3D;github&amp;utm_medium&#x3D;referral&amp;utm_content&#x3D;readme)
 - 📚 **API Reference:** [docs.apiverve.com/ref/unicodeescape](https://docs.apiverve.com/ref/unicodeescape)
 - 📖 **OpenAPI Spec:** [openapi.yaml](./openapi.yaml)
 - 💡 **Examples:** [examples/](./examples/)
@@ -199,11 +199,88 @@ x-api-key: YOUR_API_KEY_HERE
 Get your API key: [https://apiverve.com](https://apiverve.com)
 
 ### Response Format
-All responses are JSON with this structure:
+
+Every APIVerve endpoint returns the same envelope — check `status`, then read `data`:
+
 ```json
 {
   "status": "ok",
+  "error": null,
   "data": { ... }
+}
+```
+
+### Example Response
+
+A real response from the Unicode Escape/Unescape API:
+
+```json
+{
+  "status": "ok",
+  "error": null,
+  "data": {
+    "action": "escape",
+    "original": "Hello World",
+    "escaped": "\\u0048\\u0065\\u006C\\u006C\\u006F\\u0020\\u0057\\u006F\\u0072\\u006C\\u0064",
+    "character_count": 11,
+    "unicode_points": [
+      {
+        "char": "H",
+        "unicode": "\\u0048",
+        "codepoint": "U+0048"
+      },
+      {
+        "char": "e",
+        "unicode": "\\u0065",
+        "codepoint": "U+0065"
+      },
+      {
+        "char": "l",
+        "unicode": "\\u006C",
+        "codepoint": "U+006C"
+      },
+      {
+        "char": "l",
+        "unicode": "\\u006C",
+        "codepoint": "U+006C"
+      },
+      {
+        "char": "o",
+        "unicode": "\\u006F",
+        "codepoint": "U+006F"
+      },
+      {
+        "char": " ",
+        "unicode": "\\u0020",
+        "codepoint": "U+0020"
+      },
+      {
+        "char": "W",
+        "unicode": "\\u0057",
+        "codepoint": "U+0057"
+      },
+      {
+        "char": "o",
+        "unicode": "\\u006F",
+        "codepoint": "U+006F"
+      },
+      {
+        "char": "r",
+        "unicode": "\\u0072",
+        "codepoint": "U+0072"
+      },
+      {
+        "char": "l",
+        "unicode": "\\u006C",
+        "codepoint": "U+006C"
+      },
+      {
+        "char": "d",
+        "unicode": "\\u0064",
+        "codepoint": "U+0064"
+      }
+    ]
+  }
 }
 ```
 
@@ -211,7 +288,7 @@ All responses are JSON with this structure:
 
 ## Support & Community
 
-- 🏠 **API Home**: [Unicode Escape/Unescape API](https://apiverve.com/marketplace/unicodeescape?utm_source&#x3D;github&amp;utm_medium&#x3D;readme)
+- 🏠 **API Home**: [Unicode Escape/Unescape API](https://apiverve.com/marketplace/unicodeescape?utm_source&#x3D;github&amp;utm_medium&#x3D;referral&amp;utm_content&#x3D;readme)
 - 💬 **Support**: [https://apiverve.com/contact](https://apiverve.com/contact)
 - 🐛 **Issues**: [GitHub Issues](../../issues)
 - 📖 **Documentation**: [https://docs.apiverve.com](https://docs.apiverve.com)

@@ -2,9 +2,9 @@ openapi: 3.0.4
 info:
   title: Unicode Escape/Unescape
   description: >-
-    Unicode Escape/Unescape is a tool for converting characters to Unicode
-    escape sequences and vice versa. It handles all Unicode characters including
-    emojis and surrogate pairs.
+    Unicode Escape/Unescape converts text into Unicode escape sequences or
+    restores escaped strings back into readable characters. Send any string to
+    get the transformed text and total character count.
   termsOfService: https://apiverve.com/terms/
   contact:
     name: APIVerve Support
@@ -19,7 +19,7 @@ servers:
 paths:
   /v1/unicodeescape:
     post:
-      summary: Escape Unicode
+      summary: Unicode Escape/Unescape
       description: Convert characters to Unicode escape sequences (\uXXXX format)
       operationId: unicodeescape
       parameters: []
@@ -46,8 +46,7 @@ paths:
                 data:
                   action: escape
                   original: Hello World
-                  escaped: >-
-                    \u0048\u0065\u006C\u006C\u006F\u0020\u0057\u006F\u0072\u006C\u0064
+                  escaped: \u0048\u0065\u006C\u006C\u006F\u0020\u0057\u006F\u0072\u006C\u0064
                   character_count: 11
                   unicode_points:
                     - char: H
@@ -65,7 +64,7 @@ paths:
                     - char: o
                       unicode: \u006F
                       codepoint: U+006F
-                    - char: ' '
+                    - char: " "
                       unicode: \u0020
                       codepoint: U+0020
                     - char: W
