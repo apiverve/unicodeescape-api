@@ -1,7 +1,7 @@
 {
   "name": "@apiverve/unicodeescape",
-  "version": "1.2.0",
-  "description": "Unicode Escape/Unescape is a tool for converting characters to Unicode escape sequences and vice versa. It handles all Unicode characters including emojis and surrogate pairs.",
+  "version": "1.2.2",
+  "description": "Unicode Escape/Unescape converts text into Unicode escape sequences or restores escaped strings back into readable characters. Send any string to get the transformed text and total character count.",
   "main": "index.js",
   "types": "index.d.ts",
   "sideEffects": false,
@@ -34,7 +34,7 @@
   "bugs": {
     "url": "https://github.com/apiverve/unicodeescape-api/issues"
   },
-  "homepage": "https://apiverve.com/marketplace/unicodeescape?utm_source=npm&utm_medium=homepage",
+  "homepage": "https://apiverve.com/marketplace/unicodeescape?utm_source=npm&utm_medium=referral&utm_content=homepage",
   "devDependencies": {
     "mocha": "^11.0.1",
     "chai": "^5.1.2",
