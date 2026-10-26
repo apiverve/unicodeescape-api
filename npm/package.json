@@ -1,6 +1,6 @@
 {
   "name": "@apiverve/unicodeescape",
-  "version": "1.2.2",
+  "version": "1.2.3",
   "description": "Unicode Escape/Unescape converts text into Unicode escape sequences or restores escaped strings back into readable characters. Send any string to get the transformed text and total character count.",
   "main": "index.js",
   "types": "index.d.ts",
