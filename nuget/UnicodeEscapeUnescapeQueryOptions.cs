@@ -11,7 +11,7 @@ namespace APIVerve.API.UnicodeEscapeUnescape
     public class UnicodeEscapeUnescapeQueryOptions
     {
         /// <summary>
-        /// The text to escape
+        /// The text to escape; leading and trailing whitespace is escaped too
         /// </summary>
         [JsonProperty("text")]
         public string Text { get; set; }
